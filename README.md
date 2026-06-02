@@ -35,3 +35,9 @@ Para cambiar el número de WhatsApp, edita `WA_NUMBER` en el `<script>` y los en
 
 - Captura de leads: hoy el formulario solo abre WhatsApp (no guarda nada en servidor). Para no perder leads se puede conectar a email, Google Sheet o Formspree.
 - Reemplazar testimonios de ejemplo por reseñas reales (idealmente con enlace a Google Reviews).
+
+## Idiomas (bilingüe ES/EN)
+
+La página está en español por defecto. Si el navegador del visitante está en inglés, se muestra automáticamente en inglés. Hay un botón ES/EN en el menú para cambiar manualmente y la preferencia se recuerda (localStorage).
+
+Los textos se traducen vía atributos `data-i18n` y el diccionario `I18N` dentro del `<script>` de `index.html`. Para editar o añadir textos, modifica las entradas en los bloques `es` y `en` (deben tener las mismas claves).
