@@ -1,154 +1,37 @@
-# AutoSolutionMiami.com
+# AutoSolution Miami
 
-Official website repository for Auto Solution Miami.
+Landing page de conversión para Eduardo Alvarez — financiamiento de autos en Miami (crédito malo, sin crédito, ITIN, bancarrota).
 
-Developed and maintained by Index01.
+## Objetivo
 
----
+Conseguir leads. El visitante hace una breve entrevista en la web (formulario) y al enviarla se arma un mensaje de WhatsApp con sus datos, listo para contactar a Eduardo. También hay CTAs directos para llamar.
 
-## Overview
+## Flujo de conversión
 
-This repository contains the source code, assets, configuration files, and deployment structure for the official website of Auto Solution Miami.
+1. **Hero** — gancho "¿Te rechazaron el crédito?" + botón a la entrevista.
+2. **Entrevista (formulario)** — nombre, teléfono, ciudad, tipo de auto, situación de crédito, presupuesto y notas.
+3. **CTA** — al enviar abre WhatsApp con todos los datos. CTA final con teléfono + WhatsApp y botón flotante.
 
-The project is built with a strong focus on:
+## Estructura
 
-* Performance
-* SEO & AEO (Answer Engine Optimization)
-* Mobile-first design
-* Accessibility
-* Fast loading times
-* Security best practices
-* Long-term maintainability
+- `index.html` — página completa (HTML + CSS + JS en un solo archivo, sin dependencias salvo Google Fonts).
 
-The goal is to provide a modern web presence capable of achieving excellent visibility across traditional search engines and AI-powered discovery platforms.
+## Datos del negocio (configurables)
 
----
+- **Marca:** AutoSolution Miami
+- **Especialista:** Eduardo Alvarez · Doral Lincoln, Miami FL
+- **Teléfono:** (305) 218-3558
+- **WhatsApp:** en `index.html`, variable `WA_NUMBER = '13052183558'` (formato internacional, sin signos).
 
-## Technology Philosophy
+Para cambiar el número de WhatsApp, edita `WA_NUMBER` en el `<script>` y los enlaces `wa.me` del HTML. El teléfono de llamada está en los `href="tel:..."`.
 
-This project follows a lightweight approach:
+## Publicar (GitHub Pages)
 
-* Static-first architecture
-* Minimal dependencies
-* Clean semantic HTML
-* Modern CSS
-* Optimized JavaScript
-* Structured Data (Schema.org)
-* Core Web Vitals optimization
+1. Sube `index.html` a la raíz del repositorio.
+2. Settings → Pages → Source: rama `main`, carpeta `/root`.
+3. Apunta el dominio `autosolutionmiami` al sitio (Settings → Pages → Custom domain).
 
-Every design and technical decision is evaluated according to:
+## Pendiente / próximos pasos
 
-1. User experience
-2. Search visibility
-3. Loading speed
-4. Maintainability
-
----
-
-## SEO & AEO Strategy
-
-The website is optimized for:
-
-### Search Engines
-
-* Google
-* Bing
-* DuckDuckGo
-
-### AI Discovery Platforms
-
-* ChatGPT
-* Gemini
-* Claude
-* Perplexity
-* Copilot
-
-Implementation includes:
-
-* Semantic HTML
-* JSON-LD structured data
-* Open Graph metadata
-* Twitter Cards
-* XML sitemap
-* Robots.txt
-* Local business optimization
-* Content freshness strategy
-
----
-
-## Performance Targets
-
-Target metrics:
-
-| Metric         | Goal   |
-| -------------- | ------ |
-| Performance    | 95-100 |
-| Accessibility  | 95-100 |
-| Best Practices | 100    |
-| SEO            | 100    |
-
-Measured using:
-
-* Google Lighthouse
-* PageSpeed Insights
-* Search Console
-
----
-
-## Project Structure
-
-```text
-/
-├── index.html
-├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── icons/
-├── sitemap.xml
-├── robots.txt
-├── favicon.ico
-└── README.md
-```
-
----
-
-## Deployment
-
-Production deployment is handled through GitHub Pages and associated DNS configuration.
-
-All updates are version controlled and documented through Git.
-
----
-
-## Maintenance
-
-The website receives periodic maintenance focused on:
-
-* Performance optimization
-* SEO updates
-* Content freshness
-* Security reviews
-* Analytics monitoring
-* Search visibility improvements
-
----
-
-## Developed By
-
-**Index01**
-
-Modern websites optimized for speed, SEO, AEO, and long-term growth.
-
-Website:
-https://index01.net
-
----
-
-## License
-
-All rights reserved.
-
-The contents of this repository, including design, branding, images, text, and source code, are proprietary unless otherwise specified.
-
-Unauthorized copying, distribution, or commercial reuse is prohibited without written permission.
+- Captura de leads: hoy el formulario solo abre WhatsApp (no guarda nada en servidor). Para no perder leads se puede conectar a email, Google Sheet o Formspree.
+- Reemplazar testimonios de ejemplo por reseñas reales (idealmente con enlace a Google Reviews).

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="¿Te rechazaron el crédito para un auto en Miami? Eduardo Alvarez te resuelve. Aplica en 2 minutos y maneja hoy. (305) 218-3558">
+<title>AutoSolution Miami — Aplica y Maneja Hoy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --rojo:#C0392B;--rojo-dark:#922B21;--negro:#0D0D0D;--blanco:#F5F5F0;
+  --gris:#1A1A1A;--gris2:#242424;--gris3:#2E2E2E;--muted:#888;
+  --acento:#E8D5A3;--verde:#27AE60;--azul:#2980B9;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--negro);color:var(--blanco);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:16px 40px;background:rgba(13,13,13,0.97);border-bottom:1px solid rgba(255,255,255,0.06);backdrop-filter:blur(12px)}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px}
+.nav-logo span{color:var(--rojo)}
+.nav-links{display:flex;gap:8px;align-items:center}
+.nav-link{font-size:13px;color:rgba(245,245,240,0.6);text-decoration:none;padding:8px 14px;border-radius:4px;transition:color 0.2s;cursor:pointer}
+.nav-link:hover{color:var(--blanco)}
+.nav-cta{background:var(--rojo);color:var(--blanco);padding:10px 20px;border-radius:4px;font-size:14px;font-weight:500;text-decoration:none;transition:background 0.2s;border:none;cursor:pointer;font-family:'Outfit',sans-serif}
+.nav-cta:hover{background:var(--rojo-dark)}
+@media(max-width:600px){.nav-links .nav-link{display:none}.nav-logo{font-size:16px}nav{padding:14px 20px}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 40px 80px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(135deg,transparent,rgba(192,57,43,0.07));pointer-events:none}
+.hero-eye{font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--rojo);margin-bottom:20px}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(50px,9vw,108px);line-height:0.93;max-width:780px;margin-bottom:28px}
+.hero h1 em{font-style:normal;color:var(--rojo)}
+.hero-sub{font-size:clamp(15px,1.8vw,19px);font-weight:300;color:rgba(245,245,240,0.65);max-width:500px;line-height:1.65;margin-bottom:40px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-r{display:inline-flex;align-items:center;gap:8px;background:var(--rojo);color:var(--blanco);padding:16px 32px;border-radius:4px;font-size:15px;font-weight:500;text-decoration:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:background 0.2s,transform 0.1s}
+.btn-r:hover{background:var(--rojo-dark);transform:translateY(-1px)}
+.btn-o{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,0.2);color:var(--blanco);padding:16px 32px;border-radius:4px;font-size:15px;font-weight:400;text-decoration:none;background:transparent;cursor:pointer;font-family:'Outfit',sans-serif;transition:all 0.2s}
+.btn-o:hover{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.05)}
+.hero-stats{display:flex;gap:44px;margin-top:64px;padding-top:44px;border-top:1px solid rgba(255,255,255,0.08);flex-wrap:wrap}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--acento);line-height:1}
+.stat-l{font-size:12px;color:var(--muted);margin-top:3px;font-weight:300}
+@media(max-width:600px){.hero{padding:100px 20px 60px}.hero-stats{gap:28px}}
+
+/* BANDA */
+.banda{background:var(--rojo);padding:18px 0;overflow:hidden}
+.banda-track{display:flex;gap:56px;animation:slide 22s linear infinite;white-space:nowrap;width:max-content}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.banda-item{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2px;flex-shrink:0}
+.dot{color:rgba(255,255,255,0.4);margin:0 6px}
+
+/* SECCION GENERICA */
+.sec-eye{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--rojo);margin-bottom:16px;font-weight:500}
+.sec-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,5vw,60px);line-height:1.05;margin-bottom:48px}
+
+/* FORMULARIO / ENTREVISTA */
+.form-sec{padding:100px 40px;max-width:1100px;margin:0 auto}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media(max-width:768px){.form-grid{grid-template-columns:1fr}}
+.form-box{background:var(--gris);border-radius:8px;padding:40px}
+.form-field{margin-bottom:18px}
+.form-field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase}
+.form-input{width:100%;background:var(--gris2);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:14px 16px;color:var(--blanco);font-size:15px;font-family:'Outfit',sans-serif;outline:none;transition:border-color 0.2s}
+.form-input:focus{border-color:var(--rojo)}
+.form-input::placeholder{color:rgba(255,255,255,0.25)}
+select.form-input option{background:var(--gris2)}
+.form-submit{width:100%;padding:18px;background:var(--rojo);color:var(--blanco);border:none;border-radius:4px;font-size:16px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;margin-top:8px;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:10px}
+.form-submit:hover{background:var(--rojo-dark)}
+.form-submit:disabled{opacity:0.5;cursor:not-allowed}
+.info-points{display:flex;flex-direction:column;gap:24px;padding-top:8px}
+.info-pt{display:flex;gap:16px;align-items:flex-start}
+.info-icon{width:44px;height:44px;border-radius:4px;background:rgba(192,57,43,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px}
+.info-title{font-size:16px;font-weight:500;margin-bottom:4px}
+.info-desc{font-size:13px;color:var(--muted);line-height:1.6;font-weight:300}
+@media(max-width:600px){.form-sec{padding:60px 20px}.form-box{padding:24px}}
+
+/* SUCCESS */
+.success-overlay{display:none;position:fixed;inset:0;background:rgba(13,13,13,0.95);z-index:500;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:40px}
+.success-overlay.show{display:flex}
+.success-icon{font-size:64px;margin-bottom:24px}
+.success-h{font-family:'Bebas Neue',sans-serif;font-size:52px;margin-bottom:16px}
+.success-p{font-size:16px;color:var(--muted);max-width:400px;line-height:1.6;margin-bottom:32px}
+
+/* PROCESS */
+.process-sec{padding:100px 40px;background:var(--gris)}
+.process-inner{max-width:1100px;margin:0 auto}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;margin-top:56px}
+.step-card{position:relative}
+.step-n{font-family:'Bebas Neue',sans-serif;font-size:72px;color:rgba(192,57,43,0.12);line-height:1;margin-bottom:8px}
+.step-t{font-size:17px;font-weight:500;margin-bottom:8px}
+.step-d{font-size:13px;color:var(--muted);line-height:1.65;font-weight:300}
+@media(max-width:600px){.process-sec{padding:60px 20px}}
+
+/* EDUARDO */
+.edu-sec{padding:100px 40px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+@media(max-width:768px){.edu-sec{grid-template-columns:1fr;gap:40px;padding:60px 20px}}
+.edu-avatar{width:100px;height:100px;border-radius:50%;background:var(--rojo);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:1px;margin-bottom:28px}
+.edu-quote{font-size:clamp(18px,2.5vw,24px);font-weight:300;line-height:1.55;font-style:italic;color:rgba(245,245,240,0.82);margin-bottom:24px;border-left:3px solid var(--rojo);padding-left:20px}
+.edu-name{font-weight:500;font-size:15px}
+.edu-role{font-size:12px;color:var(--muted);margin-top:3px}
+.creds{display:flex;flex-direction:column;gap:12px}
+.cred{display:flex;align-items:flex-start;gap:14px;padding:18px;background:var(--gris);border-radius:4px}
+.cred-ic{font-size:22px;flex-shrink:0;margin-top:1px}
+.cred-t{font-size:14px;font-weight:500;margin-bottom:3px}
+.cred-d{font-size:12px;color:var(--muted);font-weight:300}
+
+/* REVIEWS */
+.rev-sec{padding:100px 40px;background:var(--gris)}
+.rev-inner{max-width:1100px;margin:0 auto}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;margin-top:56px}
+.rev-card{background:var(--negro);padding:32px}
+.stars{color:var(--acento);font-size:16px;letter-spacing:2px;margin-bottom:16px}
+.rev-text{font-size:14px;line-height:1.7;color:rgba(245,245,240,0.75);font-weight:300;margin-bottom:20px;font-style:italic}
+.rev-name{font-size:13px;font-weight:500}
+.rev-city{font-size:11px;color:var(--muted);margin-top:2px}
+@media(max-width:600px){.rev-sec{padding:60px 20px}}
+
+/* CTA FINAL */
+.cta-sec{padding:120px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(192,57,43,0.1) 0%,transparent 68%);pointer-events:none}
+.cta-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,7vw,88px);line-height:1;margin-bottom:20px}
+.cta-h em{font-style:normal;color:var(--rojo)}
+.cta-p{font-size:17px;color:rgba(245,245,240,0.55);font-weight:300;margin-bottom:44px}
+.cta-phone{display:inline-flex;align-items:center;gap:14px;font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4.5vw,48px);letter-spacing:2px;color:var(--blanco);text-decoration:none;background:var(--rojo);padding:22px 44px;border-radius:4px;transition:background 0.2s}
+.cta-phone:hover{background:var(--rojo-dark)}
+.cta-wa{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:14px;color:rgba(245,245,240,0.45);text-decoration:none;transition:color 0.2s}
+.cta-wa:hover{color:var(--blanco)}
+@media(max-width:600px){.cta-sec{padding:80px 20px}}
+
+/* FOOTER */
+footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.f-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2px}
+.f-logo span{color:var(--rojo)}
+.f-text{font-size:11px;color:var(--muted)}
+@media(max-width:600px){footer{padding:28px 20px;flex-direction:column;text-align:center}}
+
+/* FLOATING WA */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:150;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s;text-decoration:none}
+.wa-float:hover{transform:scale(1.1)}
+@media(max-width:600px){.wa-float{bottom:20px;right:20px;width:50px;height:50px}}
+
+/* FADE ANIMATIONS */
+.fade{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade.in{opacity:1;transform:translateY(0)}
+
+/* NOTIFICATION */
+.notif{position:fixed;bottom:100px;right:28px;background:var(--gris);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:16px 20px;font-size:14px;z-index:300;transform:translateY(20px);opacity:0;transition:all 0.3s;max-width:280px}
+.notif.show{transform:translateY(0);opacity:1}
+.notif.success-n{border-left:3px solid var(--verde)}
+.notif.error-n{border-left:3px solid var(--rojo)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Auto<span>Solution</span> Miami</div>
+  <div class="nav-links">
+    <span class="nav-link" onclick="goTo('form-sec')">Aplicar</span>
+    <span class="nav-link" onclick="goTo('edu-sec')">Eduardo</span>
+    <a href="tel:+13052183558" class="nav-cta">📞 (305) 218-3558</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-eye">Miami · Doral · Toda la Florida</p>
+  <h1>¿Te<br>rechazaron<br>el <em>crédito?</em></h1>
+  <p class="hero-sub">Cuéntame tu situación en 2 minutos y te contacto en menos de una hora. Crédito malo, sin crédito, ITIN — todos aprobados.</p>
+  <div class="hero-btns">
+    <button class="btn-r" onclick="goTo('form-sec')">
+      📝 Aplicar en 2 minutos
+    </button>
+    <a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20quiero%20saber%20si%20califico%20para%20un%20auto." class="btn-o" target="_blank" rel="noopener">
+      💬 WhatsApp
+    </a>
+  </div>
+  <div class="hero-stats">
+    <div><div class="stat-n">9+</div><div class="stat-l">Años en Miami</div></div>
+    <div><div class="stat-n">700+</div><div class="stat-l">Autos disponibles</div></div>
+    <div><div class="stat-n">100%</div><div class="stat-l">Clientes aprobados</div></div>
+    <div><div class="stat-n">$0</div><div class="stat-l">Costo de consulta</div></div>
+  </div>
+</section>
+
+<!-- BANDA -->
+<div class="banda">
+  <div class="banda-track">
+    <span class="banda-item">CRÉDITO MALO<span class="dot">·</span></span>
+    <span class="banda-item">SIN CRÉDITO<span class="dot">·</span></span>
+    <span class="banda-item">ITIN ACEPTADO<span class="dot">·</span></span>
+    <span class="banda-item">BANCARROTA<span class="dot">·</span></span>
+    <span class="banda-item">PRIMER AUTO<span class="dot">·</span></span>
+    <span class="banda-item">TODAS LAS MARCAS<span class="dot">·</span></span>
+    <span class="banda-item">APROBACIÓN RÁPIDA<span class="dot">·</span></span>
+    <span class="banda-item">CRÉDITO MALO<span class="dot">·</span></span>
+    <span class="banda-item">SIN CRÉDITO<span class="dot">·</span></span>
+    <span class="banda-item">ITIN ACEPTADO<span class="dot">·</span></span>
+    <span class="banda-item">BANCARROTA<span class="dot">·</span></span>
+    <span class="banda-item">PRIMER AUTO<span class="dot">·</span></span>
+    <span class="banda-item">TODAS LAS MARCAS<span class="dot">·</span></span>
+    <span class="banda-item">APROBACIÓN RÁPIDA<span class="dot">·</span></span>
+  </div>
+</div>
+
+<!-- FORMULARIO / ENTREVISTA -->
+<section style="padding:100px 0;background:var(--negro)" id="form-sec">
+  <div class="form-sec" style="padding:0 40px">
+    <div class="form-grid">
+      <!-- Info -->
+      <div>
+        <p class="sec-eye">Aplica ahora</p>
+        <h2 class="sec-h">2 minutos.<br>Sin compromiso.<br><em style="font-style:normal;color:var(--rojo)">Gratis.</em></h2>
+        <p style="font-size:15px;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:40px">Cuéntame tu situación y te contacto en menos de una hora. Sin buro de crédito todavía, sin papeleos — solo una conversación.</p>
+        <div class="info-points">
+          <div class="info-pt">
+            <div class="info-icon">🔒</div>
+            <div>
+              <p class="info-title">100% confidencial</p>
+              <p class="info-desc">Tu información no se comparte con nadie sin tu autorización.</p>
+            </div>
+          </div>
+          <div class="info-pt">
+            <div class="info-icon">⚡</div>
+            <div>
+              <p class="info-title">Respuesta en menos de 1 hora</p>
+              <p class="info-desc">Te llamo o escribo personalmente — no un robot, no un call center.</p>
+            </div>
+          </div>
+          <div class="info-pt">
+            <div class="info-icon">🚗</div>
+            <div>
+              <p class="info-title">700+ autos disponibles</p>
+              <p class="info-desc">Todas las marcas, todos los precios. Nuevos y usados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-box">
+        <div class="form-field">
+          <label>Tu nombre completo</label>
+          <input type="text" class="form-input" id="f-name" placeholder="María González">
+        </div>
+        <div class="form-field">
+          <label>Teléfono o WhatsApp</label>
+          <input type="tel" class="form-input" id="f-phone" placeholder="(305) 000-0000">
+        </div>
+        <div class="form-field">
+          <label>Ciudad donde vives</label>
+          <input type="text" class="form-input" id="f-city" placeholder="Miami, Hialeah, Doral...">
+        </div>
+        <div class="form-field">
+          <label>¿Qué tipo de auto buscas?</label>
+          <select class="form-input" id="f-type">
+            <option value="">Selecciona...</option>
+            <option>Sedan (Toyota, Honda, Hyundai...)</option>
+            <option>SUV / Crossover</option>
+            <option>Pickup Truck</option>
+            <option>Van / Minivan</option>
+            <option>Cualquiera que me aprueben</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Tu situación de crédito</label>
+          <select class="form-input" id="f-credit">
+            <option value="">Selecciona...</option>
+            <option>No tengo historial de crédito en USA</option>
+            <option>Crédito malo (me han rechazado antes)</option>
+            <option>Crédito regular (580-669)</option>
+            <option>Crédito bueno (670+)</option>
+            <option>Bancarrota reciente</option>
+            <option>Solo tengo ITIN</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Pago mensual que puedes manejar</label>
+          <select class="form-input" id="f-budget">
+            <option value="">Selecciona...</option>
+            <option>Menos de $300/mes</option>
+            <option>$300 - $500/mes</option>
+            <option>$500 - $700/mes</option>
+            <option>$700 - $1,000/mes</option>
+            <option>Más de $1,000/mes</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>¿Algo más que Eduardo deba saber? (opcional)</label>
+          <textarea class="form-input" id="f-notes" rows="3" placeholder="Ej: Me rechazaron en 3 dealers, tengo trabajo estable hace 2 años..." style="resize:none"></textarea>
+        </div>
+        <button class="form-submit" id="submit-btn" onclick="submitLead()">
+          <span id="submit-text">Enviar por WhatsApp →</span>
+        </button>
+        <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:12px">Al enviar aceptas que Eduardo te contacte para ayudarte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="process-sec" id="process-sec">
+  <div class="process-inner">
+    <p class="sec-eye">Cómo funciona</p>
+    <h2 class="sec-h">Del formulario<br>al volante</h2>
+    <div class="steps-grid">
+      <div class="step-card fade">
+        <div class="step-n">01</div>
+        <h3 class="step-t">Aplicas en 2 minutos</h3>
+        <p class="step-d">Llena el formulario con tu situación — sin buro todavía, sin papeleos. Solo una conversación.</p>
+      </div>
+      <div class="step-card fade">
+        <div class="step-n">02</div>
+        <h3 class="step-t">Eduardo te llama</h3>
+        <p class="step-d">En menos de una hora te contacto personalmente. Analizamos tu caso y te digo exactamente qué opciones tienes.</p>
+      </div>
+      <div class="step-card fade">
+        <div class="step-n">03</div>
+        <h3 class="step-t">Encontramos tu auto</h3>
+        <p class="step-d">Con 700+ autos disponibles de todas las marcas, encontramos el que se ajusta a tu presupuesto y necesidad.</p>
+      </div>
+      <div class="step-card fade">
+        <div class="step-n">04</div>
+        <h3 class="step-t">Te vas manejando</h3>
+        <p class="step-d">Visitas el dealer en Doral, firmas y te vas en tu carro el mismo día. Así de simple.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUARDO -->
+<section class="edu-sec" id="edu-sec">
+  <div class="fade">
+    <div class="edu-avatar">EA</div>
+    <blockquote class="edu-quote">"Llevo más de 9 años en Miami ayudando a familias a conseguir su auto. No importa tu historial — siempre hay una solución."</blockquote>
+    <p class="edu-name">Eduardo Alvarez</p>
+    <p class="edu-role">Especialista en financiamiento · Doral Lincoln, Miami FL</p>
+  </div>
+  <div class="creds fade">
+    <div class="cred"><div class="cred-ic">🏆</div><div><p class="cred-t">9 años en Miami</p><p class="cred-d">West Kendall Toyota · Ocean Automotive · Doral Lincoln</p></div></div>
+    <div class="cred"><div class="cred-ic">💰</div><div><p class="cred-t">Experto en financing difícil</p><p class="cred-d">Crédito bajo · ITIN · Bancarrota · Sin historial en USA</p></div></div>
+    <div class="cred"><div class="cred-ic">🚗</div><div><p class="cred-t">700+ autos disponibles</p><p class="cred-d">Todas las marcas · Nuevos y usados · Todos los precios</p></div></div>
+    <div class="cred"><div class="cred-ic">🇨🇺</div><div><p class="cred-t">100% en español</p><p class="cred-d">Cubano · Entiende tu situación · Sin letra pequeña</p></div></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="rev-sec">
+  <div class="rev-inner">
+    <p class="sec-eye">Lo que dicen</p>
+    <h2 class="sec-h">Resultados reales</h2>
+    <div class="rev-grid">
+      <div class="rev-card fade"><div class="stars">★★★★★</div><p class="rev-text">"Tres dealers me dijeron que no. Eduardo me llamó, buscó el auto y salí manejando ese mismo día."</p><p class="rev-name">María G.</p><p class="rev-city">Hialeah, FL</p></div>
+      <div class="rev-card fade"><div class="stars">★★★★★</div><p class="rev-text">"Vine de Venezuela hace dos años sin crédito aquí. Eduardo encontró la manera. Proceso sencillo y rápido."</p><p class="rev-name">Carlos R.</p><p class="rev-city">Doral, FL</p></div>
+      <div class="rev-card fade"><div class="stars">★★★★★</div><p class="rev-text">"Bancarrota hace dos años y pensé que nunca me aprobarían. Eduardo lo hizo posible. Muy honesto."</p><p class="rev-name">Ana M.</p><p class="rev-city">Kendall, FL</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-sec">
+  <h2 class="cta-h">Llama <em>ahora.</em><br>Te resolvemos hoy.</h2>
+  <p class="cta-p">Sin compromiso · Sin costo · En español</p>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+    <a href="tel:+13052183558" class="cta-phone">📞 (305) 218-3558</a>
+    <a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20necesito%20ayuda%20para%20conseguir%20un%20auto." class="cta-wa" target="_blank" rel="noopener">
+      💬 También por WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">Auto<span>Solution</span> Miami</div>
+  <p class="f-text">Doral Lincoln · Miami, FL · Eduardo Alvarez · (305) 218-3558</p>
+  <p class="f-text">© 2025 AutoSolution Miami</p>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20necesito%20ayuda%20para%20conseguir%20un%20auto." class="wa-float" target="_blank" rel="noopener" title="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NOTIFICACIÓN -->
+<div class="notif" id="notif"></div>
+
+<!-- SUCCESS OVERLAY -->
+<div class="success-overlay" id="success-overlay">
+  <div class="success-icon">🎉</div>
+  <h2 class="success-h">¡Solicitud enviada!</h2>
+  <p class="success-p">Eduardo te contactará en menos de una hora. Revisa tu WhatsApp y teléfono.</p>
+  <a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20acabo%20de%20enviar%20mi%20solicitud%20en%20la%20p%C3%A1gina." class="btn-r" target="_blank" rel="noopener">Confirmar por WhatsApp</a>
+  <button class="btn-o" style="margin-top:12px" onclick="document.getElementById('success-overlay').classList.remove('show')">Seguir navegando</button>
+</div>
+
+<script>
+// Número de WhatsApp del negocio (formato internacional, sin signos)
+const WA_NUMBER = '13052183558';
+
+// SCROLL HELPER
+function goTo(id){
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+// LEAD SUBMIT -> WhatsApp con los datos
+function submitLead(){
+  const name = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const city = document.getElementById('f-city').value.trim();
+  const type = document.getElementById('f-type').value;
+  const credit = document.getElementById('f-credit').value;
+  const budget = document.getElementById('f-budget').value;
+  const notes = document.getElementById('f-notes').value.trim();
+
+  if(!name){showNotif('Por favor escribe tu nombre.','error-n');return}
+  if(!phone){showNotif('Necesitamos tu teléfono para contactarte.','error-n');return}
+  if(!credit){showNotif('Selecciona tu situación de crédito.','error-n');return}
+  if(!budget){showNotif('Selecciona tu presupuesto mensual.','error-n');return}
+
+  const btn = document.getElementById('submit-btn');
+  const txt = document.getElementById('submit-text');
+  btn.disabled = true;
+  txt.textContent = 'Enviando...';
+
+  // Mensaje de WhatsApp con los datos de la entrevista
+  const waMsg = encodeURIComponent(
+    `🚗 NUEVO LEAD — AutoSolution Miami\n\n` +
+    `👤 Nombre: ${name}\n` +
+    `📱 Teléfono: ${phone}\n` +
+    `📍 Ciudad: ${city||'No indicada'}\n` +
+    `🚙 Auto buscado: ${type||'No indicado'}\n` +
+    `💳 Crédito: ${credit}\n` +
+    `💰 Presupuesto: ${budget}\n` +
+    `📝 Notas: ${notes||'Ninguna'}\n\n` +
+    `⏰ ${new Date().toLocaleString('es-US')}`
+  );
+
+  setTimeout(()=>{
+    btn.disabled = false;
+    txt.textContent = 'Enviar por WhatsApp →';
+    document.getElementById('success-overlay').classList.add('show');
+    // Abre WhatsApp con la info ya armada
+    window.open('https://wa.me/'+WA_NUMBER+'?text='+waMsg,'_blank');
+  }, 800);
+}
+
+// NOTIFICATION
+function showNotif(msg, type){
+  const n = document.getElementById('notif');
+  n.textContent = msg;
+  n.className = 'notif '+type+' show';
+  setTimeout(()=>n.classList.remove('show'),3500);
+}
+
+// FADE ON SCROLL
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('in'), i*100);
+      observer.unobserve(e.target);
+    }
+  });
+},{threshold:0.1});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
