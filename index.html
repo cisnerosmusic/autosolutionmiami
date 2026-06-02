@@ -158,18 +158,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 @media(max-width:600px){.nav-links .nav-link{display:none}.nav-logo{font-size:16px}nav{padding:14px 20px}}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 40px 80px;position:relative;overflow:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 40px 80px;position:relative;overflow:hidden}
 .hero::after{content:'';position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(135deg,transparent,rgba(192,57,43,0.07));pointer-events:none}
 .hero-eye{font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--rojo-text);margin-bottom:20px}
 .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(50px,9vw,108px);line-height:0.93;max-width:780px;margin-bottom:28px}
 .hero h1 em{font-style:normal;color:var(--rojo-text)}
 .hero-sub{font-size:clamp(15px,1.8vw,19px);font-weight:300;color:rgba(245,245,240,0.65);max-width:500px;line-height:1.65;margin-bottom:40px}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 .btn-r{display:inline-flex;align-items:center;gap:8px;background:var(--rojo);color:var(--blanco);padding:16px 32px;border-radius:4px;font-size:15px;font-weight:500;text-decoration:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:background 0.2s,transform 0.1s}
 .btn-r:hover{background:var(--rojo-dark);transform:translateY(-1px)}
 .btn-o{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,0.2);color:var(--blanco);padding:16px 32px;border-radius:4px;font-size:15px;font-weight:400;text-decoration:none;background:transparent;cursor:pointer;font-family:'Outfit',sans-serif;transition:all 0.2s}
 .btn-o:hover{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.05)}
-.hero-stats{display:flex;gap:44px;margin-top:64px;padding-top:44px;border-top:1px solid rgba(255,255,255,0.08);flex-wrap:wrap}
+.hero-stats{display:flex;gap:44px;margin-top:64px;padding-top:44px;border-top:1px solid rgba(255,255,255,0.08);flex-wrap:wrap;justify-content:center}
 .stat-n{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--acento);line-height:1}
 .stat-l{font-size:12px;color:var(--muted);margin-top:3px;font-weight:300}
 @media(max-width:600px){.hero{padding:100px 20px 60px}.hero-stats{gap:28px}}
