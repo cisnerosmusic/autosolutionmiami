@@ -1,0 +1,11 @@
+/* TEAM */
+  Especialista en financiamiento: Eduardo Alvarez
+  Contacto: (305) 218-3558
+  Ubicación: Doral, Miami, Florida, USA
+
+/* SITE */
+  Marca: AutoSolution Miami
+  Idioma principal: Español (es) — Inglés (en) en camino
+  Estándares: HTML5, CSS3, JavaScript
+  Hospedaje: GitHub Pages
+  Última actualización: 2026-06-02
