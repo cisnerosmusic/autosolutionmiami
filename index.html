@@ -155,6 +155,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .nav-link:hover{color:var(--blanco)}
 .nav-cta{background:var(--rojo);color:var(--blanco);padding:10px 20px;border-radius:4px;font-size:14px;font-weight:500;text-decoration:none;transition:background 0.2s;border:none;cursor:pointer;font-family:'Outfit',sans-serif}
 .nav-cta:hover{background:var(--rojo-dark)}
+.ph-ico{width:0.85em;height:0.85em;fill:currentColor;vertical-align:-0.12em;margin-right:7px;flex-shrink:0}
 @media(max-width:600px){.nav-links .nav-link{display:none}.nav-logo{font-size:16px}nav{padding:14px 20px}}
 
 /* HERO */
@@ -304,7 +305,7 @@ footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:fle
     <span class="nav-link" onclick="goTo('edu-sec')" data-i18n="nav_eduardo">Eduardo</span>
     <span class="nav-link" onclick="goTo('faq-sec')" data-i18n="nav_faq">Preguntas</span>
     <button id="lang-toggle" class="nav-cta" style="background:transparent;border:1px solid rgba(255,255,255,0.25);padding:8px 12px;margin-right:6px" onclick="setLang(currentLang==='es'?'en':'es')">EN</button>
-    <a href="tel:+13052183558" class="nav-cta">📞 (305) 218-3558</a>
+    <a href="tel:+13052183558" class="nav-cta"><svg class="ph-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(305) 218-3558</a>
   </div>
 </nav>
 
@@ -500,7 +501,7 @@ footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:fle
   <h2 class="cta-h" data-i18n-html="cta_h">Llama <em>ahora.</em><br>Te resolvemos hoy.</h2>
   <p class="cta-p" data-i18n="cta_p">Sin compromiso · Sin costo · En español</p>
   <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
-    <a href="tel:+13052183558" class="cta-phone">📞 (305) 218-3558</a>
+    <a href="tel:+13052183558" class="cta-phone"><svg class="ph-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(305) 218-3558</a>
     <a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20necesito%20ayuda%20para%20conseguir%20un%20auto." class="cta-wa wa-link" data-wa="wa_help" target="_blank" rel="noopener" data-i18n="cta_wa">💬 También por WhatsApp</a>
   </div>
 </section>
