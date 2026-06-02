@@ -139,7 +139,7 @@
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --rojo:#C0392B;--rojo-dark:#922B21;--negro:#0D0D0D;--blanco:#F5F5F0;
+  --rojo:#C0392B;--rojo-dark:#922B21;--rojo-text:#E74C3C;--negro:#0D0D0D;--blanco:#F5F5F0;
   --gris:#1A1A1A;--gris2:#242424;--gris3:#2E2E2E;--muted:#888;
   --acento:#E8D5A3;--verde:#27AE60;--azul:#2980B9;
 }
@@ -149,7 +149,7 @@ body{font-family:'Outfit',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Hel
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:16px 40px;background:rgba(13,13,13,0.97);border-bottom:1px solid rgba(255,255,255,0.06);backdrop-filter:blur(12px)}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px}
-.nav-logo span{color:var(--rojo)}
+.nav-logo span{color:var(--rojo-text)}
 .nav-links{display:flex;gap:8px;align-items:center}
 .nav-link{font-size:13px;color:rgba(245,245,240,0.6);text-decoration:none;padding:8px 14px;border-radius:4px;transition:color 0.2s;cursor:pointer}
 .nav-link:hover{color:var(--blanco)}
@@ -160,9 +160,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 40px 80px;position:relative;overflow:hidden}
 .hero::after{content:'';position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(135deg,transparent,rgba(192,57,43,0.07));pointer-events:none}
-.hero-eye{font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--rojo);margin-bottom:20px}
+.hero-eye{font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--rojo-text);margin-bottom:20px}
 .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(50px,9vw,108px);line-height:0.93;max-width:780px;margin-bottom:28px}
-.hero h1 em{font-style:normal;color:var(--rojo)}
+.hero h1 em{font-style:normal;color:var(--rojo-text)}
 .hero-sub{font-size:clamp(15px,1.8vw,19px);font-weight:300;color:rgba(245,245,240,0.65);max-width:500px;line-height:1.65;margin-bottom:40px}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
 .btn-r{display:inline-flex;align-items:center;gap:8px;background:var(--rojo);color:var(--blanco);padding:16px 32px;border-radius:4px;font-size:15px;font-weight:500;text-decoration:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:background 0.2s,transform 0.1s}
@@ -182,7 +182,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .dot{color:rgba(255,255,255,0.4);margin:0 6px}
 
 /* SECCION GENERICA */
-.sec-eye{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--rojo);margin-bottom:16px;font-weight:500}
+.sec-eye{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--rojo-text);margin-bottom:16px;font-weight:500}
 .sec-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,5vw,60px);line-height:1.05;margin-bottom:48px}
 
 /* FORMULARIO / ENTREVISTA */
@@ -193,7 +193,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .form-field{margin-bottom:18px}
 .form-field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px;letter-spacing:1px;text-transform:uppercase}
 .form-input{width:100%;background:var(--gris2);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:14px 16px;color:var(--blanco);font-size:15px;font-family:'Outfit',sans-serif;outline:none;transition:border-color 0.2s}
-.form-input:focus{border-color:var(--rojo)}
+.form-input:focus{border-color:var(--rojo-text)}
 .form-input::placeholder{color:rgba(255,255,255,0.25)}
 select.form-input option{background:var(--gris2)}
 .form-submit{width:100%;padding:18px;background:var(--rojo);color:var(--blanco);border:none;border-radius:4px;font-size:16px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;margin-top:8px;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:10px}
@@ -252,7 +252,7 @@ select.form-input option{background:var(--gris2)}
 .faq-list{margin-top:40px;border-top:1px solid rgba(255,255,255,0.08)}
 .faq-item{border-bottom:1px solid rgba(255,255,255,0.08)}
 .faq-q{width:100%;text-align:left;background:transparent;border:none;color:var(--blanco);font-family:'Outfit',sans-serif;font-size:clamp(16px,2vw,19px);font-weight:500;padding:24px 44px 24px 0;cursor:pointer;position:relative;display:block}
-.faq-q::after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--rojo);transition:transform 0.25s;line-height:1}
+.faq-q::after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--rojo-text);transition:transform 0.25s;line-height:1}
 .faq-item.open .faq-q::after{content:'−'}
 .faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;color:var(--muted);font-size:15px;line-height:1.7;font-weight:300}
 .faq-item.open .faq-a{max-height:320px}
@@ -263,7 +263,7 @@ select.form-input option{background:var(--gris2)}
 .cta-sec{padding:120px 40px;text-align:center;position:relative;overflow:hidden}
 .cta-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(192,57,43,0.1) 0%,transparent 68%);pointer-events:none}
 .cta-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,7vw,88px);line-height:1;margin-bottom:20px}
-.cta-h em{font-style:normal;color:var(--rojo)}
+.cta-h em{font-style:normal;color:var(--rojo-text)}
 .cta-p{font-size:17px;color:rgba(245,245,240,0.55);font-weight:300;margin-bottom:44px}
 .cta-phone{display:inline-flex;align-items:center;gap:14px;font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4.5vw,48px);letter-spacing:2px;color:var(--blanco);text-decoration:none;background:var(--rojo);padding:22px 44px;border-radius:4px;transition:background 0.2s}
 .cta-phone:hover{background:var(--rojo-dark)}
@@ -274,7 +274,7 @@ select.form-input option{background:var(--gris2)}
 /* FOOTER */
 footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2px}
-.f-logo span{color:var(--rojo)}
+.f-logo span{color:var(--rojo-text)}
 .f-text{font-size:11px;color:var(--muted)}
 @media(max-width:600px){footer{padding:28px 20px;flex-direction:column;text-align:center}}
 
@@ -351,7 +351,7 @@ footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:fle
     <div class="form-grid">
       <div>
         <p class="sec-eye" data-i18n="form_eye">Aplica ahora</p>
-        <h2 class="sec-h" data-i18n-html="form_h">2 minutos.<br>Sin compromiso.<br><em style='font-style:normal;color:var(--rojo)'>Gratis.</em></h2>
+        <h2 class="sec-h" data-i18n-html="form_h">2 minutos.<br>Sin compromiso.<br><em style='font-style:normal;color:var(--rojo-text)'>Gratis.</em></h2>
         <p style="font-size:15px;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:40px" data-i18n="form_desc">Cuéntame tu situación y te contacto en menos de una hora. Sin buro de crédito todavía, sin papeleos — solo una conversación.</p>
         <div class="info-points">
           <div class="info-pt">
@@ -380,19 +380,19 @@ footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:fle
 
       <div class="form-box">
         <div class="form-field">
-          <label data-i18n="lbl_name">Tu nombre completo</label>
+          <label for="f-name" data-i18n="lbl_name">Tu nombre completo</label>
           <input type="text" class="form-input" id="f-name" placeholder="María González">
         </div>
         <div class="form-field">
-          <label data-i18n="lbl_phone">Teléfono o WhatsApp</label>
+          <label for="f-phone" data-i18n="lbl_phone">Teléfono o WhatsApp</label>
           <input type="tel" class="form-input" id="f-phone" placeholder="(305) 000-0000">
         </div>
         <div class="form-field">
-          <label data-i18n="lbl_city">Ciudad donde vives</label>
+          <label for="f-city" data-i18n="lbl_city">Ciudad donde vives</label>
           <input type="text" class="form-input" id="f-city" placeholder="Miami, Hialeah, Doral...">
         </div>
         <div class="form-field">
-          <label data-i18n="lbl_type">¿Qué tipo de auto buscas?</label>
+          <label for="f-type" data-i18n="lbl_type">¿Qué tipo de auto buscas?</label>
           <select class="form-input" id="f-type">
             <option value="" data-i18n="opt_select">Selecciona...</option>
             <option data-i18n="opt_sedan">Sedan (Toyota, Honda, Hyundai...)</option>
@@ -403,7 +403,7 @@ footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:fle
           </select>
         </div>
         <div class="form-field">
-          <label data-i18n="lbl_credit">Tu situación de crédito</label>
+          <label for="f-credit" data-i18n="lbl_credit">Tu situación de crédito</label>
           <select class="form-input" id="f-credit">
             <option value="" data-i18n="opt_select">Selecciona...</option>
             <option data-i18n="cr_none">No tengo historial de crédito en USA</option>
@@ -415,7 +415,7 @@ footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:fle
           </select>
         </div>
         <div class="form-field">
-          <label data-i18n="lbl_budget">Pago mensual que puedes manejar</label>
+          <label for="f-budget" data-i18n="lbl_budget">Pago mensual que puedes manejar</label>
           <select class="form-input" id="f-budget">
             <option value="" data-i18n="opt_select">Selecciona...</option>
             <option data-i18n="bd_300">Menos de $300/mes</option>
@@ -426,7 +426,7 @@ footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:fle
           </select>
         </div>
         <div class="form-field">
-          <label data-i18n="lbl_notes">¿Algo más que Eduardo deba saber? (opcional)</label>
+          <label for="f-notes" data-i18n="lbl_notes">¿Algo más que Eduardo deba saber? (opcional)</label>
           <textarea class="form-input" id="f-notes" rows="3" data-i18n-ph="ph_notes" placeholder="Ej: Me rechazaron en 3 dealers, tengo trabajo estable hace 2 años..." style="resize:none"></textarea>
         </div>
         <button class="form-submit" id="submit-btn" onclick="submitLead()">
@@ -539,7 +539,7 @@ const I18N = {
     stat_years:"Años en Miami", stat_cars:"Autos disponibles", stat_approved:"Clientes aprobados", stat_cost:"Costo de consulta",
     b_bad:"CRÉDITO MALO", b_no:"SIN CRÉDITO", b_itin:"ITIN ACEPTADO", b_bank:"BANCARROTA", b_first:"PRIMER AUTO", b_brands:"TODAS LAS MARCAS", b_fast:"APROBACIÓN RÁPIDA",
     form_eye:"Aplica ahora",
-    form_h:"2 minutos.<br>Sin compromiso.<br><em style='font-style:normal;color:var(--rojo)'>Gratis.</em>",
+    form_h:"2 minutos.<br>Sin compromiso.<br><em style='font-style:normal;color:var(--rojo-text)'>Gratis.</em>",
     form_desc:"Cuéntame tu situación y te contacto en menos de una hora. Sin buro de crédito todavía, sin papeleos — solo una conversación.",
     info1_t:"100% confidencial", info1_d:"Tu información no se comparte con nadie sin tu autorización.",
     info2_t:"Respuesta en menos de 1 hora", info2_d:"Te llamo o escribo personalmente — no un robot, no un call center.",
@@ -588,7 +588,7 @@ const I18N = {
     stat_years:"Years in Miami", stat_cars:"Cars available", stat_approved:"Clients approved", stat_cost:"Consultation cost",
     b_bad:"BAD CREDIT", b_no:"NO CREDIT", b_itin:"ITIN ACCEPTED", b_bank:"BANKRUPTCY", b_first:"FIRST CAR", b_brands:"ALL BRANDS", b_fast:"FAST APPROVAL",
     form_eye:"Apply now",
-    form_h:"2 minutes.<br>No commitment.<br><em style='font-style:normal;color:var(--rojo)'>Free.</em>",
+    form_h:"2 minutes.<br>No commitment.<br><em style='font-style:normal;color:var(--rojo-text)'>Free.</em>",
     form_desc:"Tell me your situation and I'll contact you in under an hour. No credit check yet, no paperwork — just a conversation.",
     info1_t:"100% confidential", info1_d:"Your information is not shared with anyone without your permission.",
     info2_t:"Response in under 1 hour", info2_d:"I call or message you personally — no robot, no call center.",
