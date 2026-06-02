@@ -84,6 +84,9 @@
         "latitude": 25.8195,
         "longitude": -80.3553
       },
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "18:00"}
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-305-218-3558",
@@ -307,7 +310,7 @@ footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:fle
   <p class="hero-sub" data-i18n="hero_sub">Cuéntame tu situación en 2 minutos y te contacto en menos de una hora. Crédito malo, sin crédito, ITIN — todos aprobados.</p>
   <div class="hero-btns">
     <button class="btn-r" onclick="goTo('form-sec')" data-i18n="hero_btn">📝 Aplicar en 2 minutos</button>
-    <a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20quiero%20saber%20si%20califico%20para%20un%20auto." class="btn-o" target="_blank" rel="noopener">💬 WhatsApp</a>
+    <a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20quiero%20saber%20si%20califico%20para%20un%20auto." class="btn-o wa-link" data-wa="wa_qualify" target="_blank" rel="noopener">💬 WhatsApp</a>
   </div>
   <div class="hero-stats">
     <div><div class="stat-n">9+</div><div class="stat-l" data-i18n="stat_years">Años en Miami</div></div>
@@ -456,7 +459,7 @@ footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:fle
     <div class="cred"><div class="cred-ic">🏆</div><div><p class="cred-t" data-i18n="cred1_t">9 años en Miami</p><p class="cred-d" data-i18n="cred1_d">West Kendall Toyota · Ocean Automotive · Doral Lincoln</p></div></div>
     <div class="cred"><div class="cred-ic">💰</div><div><p class="cred-t" data-i18n="cred2_t">Experto en financing difícil</p><p class="cred-d" data-i18n="cred2_d">Crédito bajo · ITIN · Bancarrota · Sin historial en USA</p></div></div>
     <div class="cred"><div class="cred-ic">🚗</div><div><p class="cred-t" data-i18n="cred3_t">700+ autos disponibles</p><p class="cred-d" data-i18n="cred3_d">Todas las marcas · Nuevos y usados · Todos los precios</p></div></div>
-    <div class="cred"><div class="cred-ic">🇨🇺</div><div><p class="cred-t" data-i18n="cred4_t">100% en español</p><p class="cred-d" data-i18n="cred4_d">Cubano · Entiende tu situación · Sin letra pequeña</p></div></div>
+    <div class="cred"><div class="cred-ic" data-i18n="cred4_ic">🇨🇺</div><div><p class="cred-t" data-i18n="cred4_t">100% en español</p><p class="cred-d" data-i18n="cred4_d">Cubano · Entiende tu situación · Sin letra pequeña</p></div></div>
   </div>
 </section>
 
@@ -493,7 +496,7 @@ footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:fle
   <p class="cta-p" data-i18n="cta_p">Sin compromiso · Sin costo · En español</p>
   <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
     <a href="tel:+13052183558" class="cta-phone">📞 (305) 218-3558</a>
-    <a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20necesito%20ayuda%20para%20conseguir%20un%20auto." class="cta-wa" target="_blank" rel="noopener" data-i18n="cta_wa">💬 También por WhatsApp</a>
+    <a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20necesito%20ayuda%20para%20conseguir%20un%20auto." class="cta-wa wa-link" data-wa="wa_help" target="_blank" rel="noopener" data-i18n="cta_wa">💬 También por WhatsApp</a>
   </div>
 </section>
 
@@ -505,7 +508,7 @@ footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:fle
 </footer>
 
 <!-- WA FLOAT -->
-<a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20necesito%20ayuda%20para%20conseguir%20un%20auto." class="wa-float" target="_blank" rel="noopener" title="WhatsApp">
+<a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20necesito%20ayuda%20para%20conseguir%20un%20auto." class="wa-float wa-link" data-wa="wa_help" target="_blank" rel="noopener" title="WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
@@ -515,7 +518,7 @@ footer{padding:36px 40px;border-top:1px solid rgba(255,255,255,0.06);display:fle
   <div class="success-icon">🎉</div>
   <h2 class="success-h" data-i18n="success_h">¡Solicitud enviada!</h2>
   <p class="success-p" data-i18n="success_p">Eduardo te contactará en menos de una hora. Revisa tu WhatsApp y teléfono.</p>
-  <a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20acabo%20de%20enviar%20mi%20solicitud%20en%20la%20p%C3%A1gina." class="btn-r" target="_blank" rel="noopener" data-i18n="success_confirm">Confirmar por WhatsApp</a>
+  <a href="https://wa.me/13052183558?text=Hola%20Eduardo%2C%20acabo%20de%20enviar%20mi%20solicitud%20en%20la%20p%C3%A1gina." class="btn-r wa-link" data-wa="wa_sent" target="_blank" rel="noopener" data-i18n="success_confirm">Confirmar por WhatsApp</a>
   <button class="btn-o" style="margin-top:12px" onclick="document.getElementById('success-overlay').classList.remove('show')" data-i18n="success_continue">Seguir navegando</button>
 </div>
 
@@ -554,7 +557,7 @@ const I18N = {
     cred1_t:"9 años en Miami", cred1_d:"West Kendall Toyota · Ocean Automotive · Doral Lincoln",
     cred2_t:"Experto en financing difícil", cred2_d:"Crédito bajo · ITIN · Bancarrota · Sin historial en USA",
     cred3_t:"700+ autos disponibles", cred3_d:"Todas las marcas · Nuevos y usados · Todos los precios",
-    cred4_t:"100% en español", cred4_d:"Cubano · Entiende tu situación · Sin letra pequeña",
+    cred4_ic:"🇨🇺", cred4_t:"100% en español", cred4_d:"Cubano · Entiende tu situación · Sin letra pequeña",
     rev_eye:"Lo que dicen", rev_h:"Resultados reales",
     rev1:"\"Tres dealers me dijeron que no. Eduardo me llamó, buscó el auto y salí manejando ese mismo día.\"",
     rev2:"\"Vine de Venezuela hace dos años sin crédito aquí. Eduardo encontró la manera. Proceso sencillo y rápido.\"",
@@ -568,7 +571,8 @@ const I18N = {
     q6:"¿Cuánto tarda en contactarme Eduardo?", a6:"Después de enviar tu solicitud, Eduardo te contacta en menos de una hora por teléfono o WhatsApp. Sin call center y sin robots: hablas directamente con él, en español.",
     cta_h:"Llama <em>ahora.</em><br>Te resolvemos hoy.", cta_p:"Sin compromiso · Sin costo · En español", cta_wa:"💬 También por WhatsApp",
     success_h:"¡Solicitud enviada!", success_p:"Eduardo te contactará en menos de una hora. Revisa tu WhatsApp y teléfono.", success_confirm:"Confirmar por WhatsApp", success_continue:"Seguir navegando",
-    err_name:"Por favor escribe tu nombre.", err_phone:"Necesitamos tu teléfono para contactarte.", err_credit:"Selecciona tu situación de crédito.", err_budget:"Selecciona tu presupuesto mensual."
+    err_name:"Por favor escribe tu nombre.", err_phone:"Necesitamos tu teléfono para contactarte.", err_credit:"Selecciona tu situación de crédito.", err_budget:"Selecciona tu presupuesto mensual.",
+    wa_qualify:"Hola Eduardo, quiero saber si califico para un auto.", wa_help:"Hola Eduardo, necesito ayuda para conseguir un auto.", wa_sent:"Hola Eduardo, acabo de enviar mi solicitud en la página."
   },
   en: {
     nav_apply:"Apply", nav_eduardo:"Eduardo", nav_faq:"FAQ",
@@ -602,7 +606,7 @@ const I18N = {
     cred1_t:"9 years in Miami", cred1_d:"West Kendall Toyota · Ocean Automotive · Doral Lincoln",
     cred2_t:"Expert in difficult financing", cred2_d:"Low credit · ITIN · Bankruptcy · No US history",
     cred3_t:"700+ cars available", cred3_d:"All brands · New and used · All prices",
-    cred4_t:"Spanish & English spoken", cred4_d:"Cuban · Understands your situation · No fine print",
+    cred4_ic:"🤝", cred4_t:"We speak your language", cred4_d:"English & Spanish · We get newcomers · No fine print",
     rev_eye:"What they say", rev_h:"Real results",
     rev1:"\"Three dealers told me no. Eduardo called me, found the car, and I drove away that same day.\"",
     rev2:"\"I came from Venezuela two years ago with no credit here. Eduardo found a way. Simple and fast process.\"",
@@ -616,7 +620,8 @@ const I18N = {
     q6:"How soon will Eduardo contact me?", a6:"After you submit your request, Eduardo contacts you in under an hour by phone or WhatsApp. No call center and no robots: you talk directly with him.",
     cta_h:"Call <em>now.</em><br>We'll solve it today.", cta_p:"No commitment · No cost · Bilingual", cta_wa:"💬 Also via WhatsApp",
     success_h:"Request sent!", success_p:"Eduardo will contact you in under an hour. Check your WhatsApp and phone.", success_confirm:"Confirm via WhatsApp", success_continue:"Keep browsing",
-    err_name:"Please enter your name.", err_phone:"We need your phone to contact you.", err_credit:"Select your credit situation.", err_budget:"Select your monthly budget."
+    err_name:"Please enter your name.", err_phone:"We need your phone to contact you.", err_credit:"Select your credit situation.", err_budget:"Select your monthly budget.",
+    wa_qualify:"Hi Eduardo, I would like to know if I qualify for a car.", wa_help:"Hi Eduardo, I need help getting a car.", wa_sent:"Hi Eduardo, I just submitted my request on the website."
   }
 };
 
@@ -630,6 +635,7 @@ function setLang(lang){
   document.querySelectorAll('[data-i18n]').forEach(el=>{ const v=I18N[lang][el.dataset.i18n]; if(v!=null) el.textContent=v; });
   document.querySelectorAll('[data-i18n-html]').forEach(el=>{ const v=I18N[lang][el.dataset.i18nHtml]; if(v!=null) el.innerHTML=v; });
   document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ const v=I18N[lang][el.dataset.i18nPh]; if(v!=null) el.placeholder=v; });
+  document.querySelectorAll('.wa-link').forEach(el=>{ const v=I18N[lang][el.dataset.wa]; if(v!=null) el.href='https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(v); });
   const tg=document.getElementById('lang-toggle'); if(tg) tg.textContent = (lang==='es'?'EN':'ES');
   try{ localStorage.setItem('asm_lang', lang); }catch(e){}
 }
